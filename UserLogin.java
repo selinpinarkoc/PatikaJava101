@@ -3,6 +3,7 @@ public class UserLogin {
     public static void main(String[] args) {
         String username, password, reset;
         boolean again= true, newpw = true;
+
         while (again) {
             Scanner inp = new Scanner(System.in);
 
@@ -18,6 +19,7 @@ public class UserLogin {
             } else if (username.equals("patika")) {
                 System.out.print("Your password is wrong. Do you want to reset your password? yes/no: ");
                 reset = inp.nextLine();
+
                 switch (reset) {
                     case "yes":
                         while (newpw) {
@@ -33,7 +35,7 @@ public class UserLogin {
                             }
                         }
                         break;
-                    default:
+                        default:
                         again = true;
                         break;
                 }
@@ -41,7 +43,6 @@ public class UserLogin {
                 System.out.println("User not found");
                 again = true;
             }
-
         }
     }
 }
